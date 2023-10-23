@@ -7,20 +7,21 @@ CITY = "qom"
 
 
 def urlmaker(domain, city, page):
-    return domain + "/city-" + city + "?page-number="  + page
+    return domain + "/city-" + city + "?page-number=" + page
 
 
 URL = urlmaker(DOMAIN, CITY)
 
 print(URL)
 
-def contentCreatpr(URL):
+
+def contentCreator(URL):
     response = r.get(URL)
     soup = bs(response.content, 'html5lib')
     ul = soup.select_one('ul')
     lis = ul.find_all("li")
-    
-    for li in(lis):
+
+    for li in (lis):
         rooms = 0
         link = DOMAIN + li.find('a')['href']
 
@@ -33,5 +34,3 @@ def contentCreatpr(URL):
 
         price = int(li.select_one(
             ".pricing-main .text-bold").text.replace("تومان", "").replace(",", "").strip())
-        
-    
