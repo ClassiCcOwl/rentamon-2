@@ -1,5 +1,0 @@
-pandas
-matplotlib
-streamlit
-beautifulsoup4
-selenium

@@ -1,5 +1,5 @@
 pandas
 matplotlib
 streamlit
-beautifulsoup
+beautifulsoup4
 selenium
