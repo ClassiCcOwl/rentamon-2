@@ -30,12 +30,12 @@ return dis
 return days()
 """
 DOMAIN = "https://www.jabama.com"
-CITY = "qom"
+CITY = "rasht"
 ARGUMENTS = [
-    # '--headless=new',
-    # '--log-level=3',
-    # '--no-sandbox',
-    # '--disable-gpu'
+    '--headless=new',
+    '--log-level=3',
+    '--no-sandbox',
+    '--disable-gpu'
 ]
 SCHEMA = {
     "table_name": "jabama",
@@ -109,7 +109,7 @@ def db(data):
 
 
 contents = []
-for page in range(1, 3):
+for page in range(1, 5):
     url = urlmaker(DOMAIN, CITY, page)
     contentCreator(url, contents)
 db(contents)
